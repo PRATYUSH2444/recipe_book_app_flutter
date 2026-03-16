@@ -23,7 +23,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.orange,
 
       body: Center(
         child: Column(
@@ -47,6 +47,22 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
 
+            SizedBox(height: 30),
+
+            ElevatedButton(
+              onPressed: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
+
+              },
+              child: Text("Enter App"),
+            )
+
           ],
         ),
       ),
@@ -55,3 +71,49 @@ class SplashScreen extends StatelessWidget {
   }
 
 }
+
+class HomeScreen extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Recipe Book"),
+        backgroundColor: Colors.orange,
+      ),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("All Recipes"),
+            ),
+
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Add Recipe"),
+            ),
+
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Categories"),
+            ),
+
+          ],
+        ),
+      ),
+
+    );
+  }
+
+}
+
+
